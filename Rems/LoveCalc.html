@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Compatibility Test</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffebee;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 2px solid #d32f2f;
+        }
+        h1 {
+            color: #d32f2f;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ffcdd2;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #b71c1c;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d32f2f;
+            border-radius: 5px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            display: block;
+            margin: 30px auto 0;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #b71c1c;
+            transform: scale(1.05);
+        }
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            background-color: #ffebee;
+            border: 2px dashed #d32f2f;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin: 10px 0;
+        }
+        .message {
+            font-size: 18px;
+            margin-top: 15px;
+            color: #333;
+        }
+        .progress-container {
+            width: 100%;
+            height: 30px;
+            background-color: #ffcdd2;
+            border-radius: 15px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            background-color: #d32f2f;
+            width: 0%;
+            transition: width 1s;
+        }
+    </style>
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    />
+</head>
+<body>
+    <section>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Home.html">Rems Games</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Login.html">Log In</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Start Playing 🔥.</a></li>
+                  <li><a class="dropdown-item" href="#">Popular Games</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Rate us.⭐</a>
+                  </li>
+                </ul>
+              </li>
+        
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <div class="container">
+        <h1>❤️ Love Compatibility Test ❤️</h1>
+        
+        <div class="question">
+            <label>1. Have you two kissed?</label>
+            <select id="q1">
+                <option value="0">No, never</option>
+                <option value="5">Once or twice</option>
+                <option value="10">Yes, multiple times</option>
+                <option value="15">All the time!</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>2. Have you been on a date?</label>
+            <select id="q2">
+                <option value="0">No</option>
+                <option value="5">Once</option>
+                <option value="10">A few times</option>
+                <option value="15">Many dates</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>3. How often do you argue?</label>
+            <select id="q3">
+                <option value="15">Almost never</option>
+                <option value="10">Occasionally</option>
+                <option value="5">Sometimes</option>
+                <option value="0">All the time</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>4. Do you share common interests?</label>
+            <select id="q4">
+                <option value="0">Not at all</option>
+                <option value="5">A few</option>
+                <option value="10">Several</option>
+                <option value="15">Many common interests</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>5. How well do you communicate?</label>
+            <select id="q5">
+                <option value="0">Poor communication</option>
+                <option value="5">Okay communication</option>
+                <option value="10">Good communication</option>
+                <option value="15">Excellent communication</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>6. Have you met each other's friends?</label>
+            <select id="q6">
+                <option value="0">No</option>
+                <option value="5">Some friends</option>
+                <option value="10">Most friends</option>
+                <option value="15">All close friends</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>7. How much do you trust each other?</label>
+            <select id="q7">
+                <option value="0">Little to no trust</option>
+                <option value="5">Some trust</option>
+                <option value="10">Good trust</option>
+                <option value="15">Complete trust</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>8. Have you discussed future plans together?</label>
+            <select id="q8">
+                <option value="0">No</option>
+                <option value="5">Briefly mentioned</option>
+                <option value="10">Some discussions</option>
+                <option value="15">Detailed plans</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>9. How often do you think about each other?</label>
+            <select id="q9">
+                <option value="0">Rarely</option>
+                <option value="5">Sometimes</option>
+                <option value="10">Often</option>
+                <option value="15">Constantly</option>
+            </select>
+        </div>
+        
+        <div class="question">
+            <label>10. Do you feel comfortable being yourself around them?</label>
+            <select id="q10">
+                <option value="0">Not at all</option>
+                <option value="5">Somewhat</option>
+                <option value="10">Mostly</option>
+                <option value="15">Completely myself</option>
+            </select>
+        </div>
+        
+        <button onclick="calculateCompatibility()">Calculate Compatibility</button>
+        
+        <div id="result">
+            <h2>Your Love Compatibility Score</h2>
+            <div class="score" id="score">0%</div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateCompatibility() {
+         
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                const value = parseInt(document.getElementById(`q${i}`).value);
+                total += value;
+            }
+            
+          
+            const percentage = Math.round((total / 150) * 100);
+            
+          
+            document.getElementById('score').textContent = `${percentage}%`;
+            document.getElementById('progress').style.width = `${percentage}%`;
+            
+        
+            let message = "";
+            if (percentage >= 90) {
+                message = "Perfect match! You two are meant to be together. This is true love! ❤️";
+            } else if (percentage >= 75) {
+                message = "Excellent compatibility! You have a very strong connection. 💕";
+            } else if (percentage >= 60) {
+                message = "Good match! With some work, this could blossom into something beautiful. 💘";
+            } else if (percentage >= 40) {
+                message = "Potential exists, but you'll need to work on your relationship. 💔";
+            } else {
+                message = "Challenges ahead. Consider whether this relationship is right for both of you. 🖤";
+            }
+            
+            document.getElementById('message').textContent = message;
+            document.getElementById('result').style.display = 'block';
+            
+         
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

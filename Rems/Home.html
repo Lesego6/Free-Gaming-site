@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #desktop-warning {
+      display: none;
+      color: red;
+    }
+
+    #desktop-warning h1 {
+      font-size: 2rem;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+
+  <div id="desktop-warning">
+    <h1>🚫 Mobile Only</h1>
+    <p>This site is only accessible on mobile devices.</p>
+  </div>
+
+  <div id="mobile-content">
+
+   
+    <section>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Home.html">Rems Games</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Login.html">Log In</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Start Playing 🔥.</a></li>
+                  <li><a class="dropdown-item" href="#">Popular Games</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="#">Rate us.⭐</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+  
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <a href="TicTae.html" class="carousel-item active">
+            <img src="img/Tic.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Tic Tae Toe Game</h1>
+            </div>
+          </a>
+          <a href="Snakegame.html" class="carousel-item">
+            <img src="img/Snake.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </a>
+          <a href="LoveCalc.html" class="carousel-item">
+            <img src="img/Love.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </a>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="card" style="width: 18rem; margin-top: 50px; margin-left: 50px;">
+        <div class="card-body">
+          <h5 class="card-title">OUR YOUTUBE CHANNEL</h5>
+          <p class="card-text">
+            Join us on our youtube channel by clicking the button below⬇️.
+            We post videos where we take everyone through the process of creating web apps like this one.
+            We'd appreciate your subscription.
+          </p>
+          <a href="https://youtube.com/@remscodingcorner?si=klAovTRReeyHIVlj" class="card-link" style="text-decoration: none;">YOUTUBE CHANNEL Link</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  
+  <script>
+    if (window.innerWidth > 768) {
+      document.getElementById("mobile-content").style.display = "none";
+      document.getElementById("desktop-warning").style.display = "block";
+    }
+
+    window.addEventListener("resize", () => {
+      location.reload(); 
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
